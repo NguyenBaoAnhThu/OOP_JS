@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // Khai baos lop User : name , age , email
+        // Khai bao phuong thuc checkAge :
+        // Neu age < 18 --> Hien thi khong du tuoi
+        // Nguoc lai hien thi ban la du tuoi truong thanh
+        class User {
+            name ;
+            age ;
+            email ;
+            constructor(name,age,email) {
+                this.name = name ;
+                this.age = age ;
+                this.email = email;
+            }
+
+            checkAge(){
+                if (this.age<18){
+                    alert("Ban "+this.name + "Khong du tuoi");
+                }else {
+                    alert("Ban " + this.name + " da du tuoi truong thanh");
+                }
+            }
+        }
+        let Nam = new User("Nam","17","nam@gmail.com")
+        let Bao = new User("Bao","20","bao@gmail.com")
+        Nam.checkAge();
+        Bao.checkAge();
+    </script>
+</body>
+</html>
