@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      function insertNumberToArray(arr, num, index) {
+        if (index < 0 || index > arr.length) {
+          return arr;
+        }
+
+        let Newarr = arr.slice();
+        Newarr.splice(index, 0, num);
+        return Newarr;
+      }
+
+      let input = prompt("Nhập các giá trị của mảng điểm, cách nhau bằng dấu phẩy (,):");
+      let a = input.split(",").map(Number);
+      let num = parseInt(prompt("Nhập số nguyên x:"));
+      let index = parseInt(prompt("Nhập vị trí index:"));
+      let result = insertNumberToArray(a, num, index);
+      document.write("Mảng mới:", result);
+
+    </script>
+</body>
+</html>

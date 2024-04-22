@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function findAvg(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += parseFloat(arr[i]);
+            }
+            return sum / arr.length;
+        }
+
+        let input = prompt("Nhập các giá trị của mảng điểm, cách nhau bằng dấu phẩy (,):");
+        let a = input.split(",");
+        let average = findAvg(a);
+        document.write("Điểm trung bình của danh sách điểm thi là: " + average);
+
+
+    </script>
+</body>
+</html>
